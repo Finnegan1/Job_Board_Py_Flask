@@ -1,0 +1,29 @@
+{% extends 'layout.html' %} {% block content %}
+<div>
+  <h1 style="margin-left: 10%; margin-top: 100px">{{job_data['title']}}</h1>
+  <div
+    class="container"
+    style="
+      width: 100%;
+      display: Flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px
+    "
+  >
+    <div class="card" style="width: 80%; padding: 20px">
+      <h3>Description</h3>
+      <p>{{job_data['description']}}</p>
+    </div>
+    <div class="card" style="width: 80%; padding: 20px">
+        <h3>Salary</h3>
+        <p>Yearly: {{job_data['salary']}}$</p>
+      </div>
+  </div>
+</div>
+{% endblock %}
